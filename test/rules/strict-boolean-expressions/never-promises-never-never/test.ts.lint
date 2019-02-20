@@ -1,4 +1,8 @@
 declare function thingThatReturnsAPromise<T>(): Promise<T>;
 
+declare function thingThatReturnsAnythingElse(): string;
+
+if (thingThatReturnsAnythingElse()) {};
+
 if (thingThatReturnsAPromise<string>()) {}
     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~     [This type is not allowed in the 'if' condition because it is a Promise | undefined | null. Promises are never never allowed.]

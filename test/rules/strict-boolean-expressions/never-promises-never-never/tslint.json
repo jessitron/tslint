@@ -2,7 +2,8 @@
   "rules": {
     "strict-boolean-expressions": [
       true,
-      "allow-null-union"
+      "allow-null-union",
+      "allow-string"
     ]
   }
 }

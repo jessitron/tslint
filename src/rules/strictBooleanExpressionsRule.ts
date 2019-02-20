@@ -212,7 +212,7 @@ function walk(ctx: Lint.WalkContext<Options>, checker: ts.TypeChecker): void {
                 !options.strictNullChecks &&
                 (options.allowNullUnion || options.allowUndefinedUnion)
             ) {
-                if (type.symbol.name === "Promise") {
+                if (type.symbol && type.symbol.name === "Promise") {
                     ctx.addFailureAtNode(
                         node,
                         "This type is not allowed in the 'if' condition because it is a Promise | undefined | null. Promises are never never allowed.",
@@ -535,7 +535,7 @@ function showTypeFailure(ty: TypeFailure, unionType: boolean, strictNullChecks: 
             return strictNullChecks
                 ? "is always truthy"
                 : "is always truthy. It may be null/undefined, but neither " +
-                      `'${OPTION_ALLOW_NULL_UNION}' nor '${OPTION_ALLOW_UNDEFINED_UNION}' is set`;
+                `'${OPTION_ALLOW_NULL_UNION}' nor '${OPTION_ALLOW_UNDEFINED_UNION}' is set`;
         case TypeFailure.AlwaysFalsy:
             return "is always falsy";
         case TypeFailure.String:
