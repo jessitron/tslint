@@ -529,7 +529,7 @@ function showTypeFailure(ty: TypeFailure, unionType: boolean, strictNullChecks: 
             return strictNullChecks
                 ? "is always truthy"
                 : "is always truthy. It may be null/undefined, but neither " +
-                      `'${OPTION_ALLOW_NULL_UNION}' nor '${OPTION_ALLOW_UNDEFINED_UNION}' is set`;
+                `'${OPTION_ALLOW_NULL_UNION}' nor '${OPTION_ALLOW_UNDEFINED_UNION}' is set`;
         case TypeFailure.AlwaysFalsy:
             return "is always falsy";
         case TypeFailure.String:

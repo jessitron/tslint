@@ -1,0 +1,8 @@
+{
+  "rules": {
+    "strict-boolean-expressions": [
+      true,
+      "allow-null-union"
+    ]
+  }
+}
