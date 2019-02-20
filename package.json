@@ -1,5 +1,5 @@
 {
-    "name": "tslint",
+    "name": "@jessitron/tslint",
     "version": "5.12.1",
     "description": "An extensible static analysis linter for the TypeScript language",
     "bin": {
